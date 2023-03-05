@@ -11,13 +11,27 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
             //1.Генерируются 10 случайных целых чисел чисел в интервале (-40, 40). Вывести эти числа
+            //Random random = new Random();
+            //for (int i=1;i<=10;i++)
+            //{
+            //    int element = random.Next(-40, 40);
+            //    Console.WriteLine(element);
+            //}
+            //2. Генерируются 15 случайных вещественных чисел в интервале (-20, 30).
+            //Вывести эти числа. Подсчитать количество положительных чисел
             Random random = new Random();
-            for (int i=1;i<=10;i++)
+            int count = 0;
+            for (int i=1;i<=15;i++)
             {
-                int element = random.Next(-40, 40);
+                double element = -20 + 50 * random.NextDouble();
                 Console.WriteLine(element);
+                if (element>0)
+                {
+                    count++;
+                }
             }
-            //1.Генерируется 8 случайных чисел в интервале (–30, 30). Выводятся эти
+            Console.WriteLine($"Количество положительных элементов = {count}");
+            //3.Генерируется 8 случайных чисел в интервале (–30, 30). Выводятся эти
             //числа и сообщения: отрицательное – положительное, четное – нечетное(for, if)
             //Random random = new Random();
             //for (int i=1;i<=8;i++)
@@ -44,7 +58,7 @@ namespace ConsoleApp5
             //        Console.WriteLine($"{element}\t-нечётное");
             //    }
             //}
-            //2. Генерируется 10 случайных чисел в интервале (– 20, 20). Выводятся толь-
+            //4. Генерируется 10 случайных чисел в интервале (– 20, 20). Выводятся толь-
             //ко положительные числа и сообщения: четное – нечетное(for, if)
             //Random random1 = new Random();
             //for (int j=1;j<=10;j++)
